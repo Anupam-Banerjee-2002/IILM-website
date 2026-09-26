@@ -40,6 +40,15 @@ For automatic restart during development:
 npm run dev
 ```
 
+## Public deployment
+
+The public edition is published by GitHub Actions from `public/`.
+
+- Site: https://anupam-banerjee-2002.github.io/IILM-website/
+- Workflow: https://github.com/Anupam-Banerjee-2002/IILM-website/actions/workflows/deploy-pages.yml
+
+In the repository settings, set **Pages > Build and deployment > Source** to **GitHub Actions**. Each push to `main` then republishes the public edition automatically.
+
 ## Optional seed data
 
 To insert the sample data defined by the project:
