@@ -3,36 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The IILM University public newspaper: MOUs, opportunities, campus news and global learning updates.">
+  <meta name="description" content="The public IILM University Chronicle: partnerships, opportunities and campus stories.">
   <title>IILM University Chronicle</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="newspaper-page">
   <header class="news-masthead">
     <div class="container">
-      <div class="news-topline"><span>EST. 1993</span><span>NEW DELHI • GURUGRAM • GREATER NOIDA</span><span id="editionDate"></span></div>
+      <div class="news-topline">
+        <span>EST. 1993</span>
+        <span>NEW DELHI • GURUGRAM • GREATER NOIDA</span>
+        <span id="editionDate"></span>
+      </div>
       <div class="news-brand-row">
         <a class="news-brand" href="index.html">IILM <em>University</em></a>
         <div class="news-title">THE UNIVERSITY CHRONICLE</div>
-        <div class="news-actions"><a href="login.html">Sign in</a><a class="news-join" href="register.html">Join IILM</a></div>
+        <div class="news-actions">
+          <a href="#about">About this edition</a>
+          <a class="news-join" href="#mous">Explore stories</a>
+        </div>
       </div>
       <nav class="news-nav" aria-label="Newspaper sections">
-        <a href="#front-page">Front Page</a><a href="#mous">MOUs</a><a href="#opportunities">Opportunities</a><a href="#campus-news">Campus News</a><a href="#about">About IILM</a>
+        <a href="#front-page">Front Page</a>
+        <a href="#mous">MOUs</a>
+        <a href="#opportunities">Opportunities</a>
+        <a href="#campus-news">Campus News</a>
+        <a href="#about">About IILM</a>
       </nav>
     </div>
   </header>
 
-  <div class="news-ticker"><div class="container"><strong>BREAKING</strong><span id="tickerText">Loading the latest IILM stories…</span></div></div>
+  <div class="news-ticker">
+    <div class="container"><strong>ON THE RECORD</strong><span id="tickerText">Loading the latest IILM stories...</span></div>
+  </div>
 
   <main id="front-page" class="container newspaper-main">
     <section class="paper-intro">
       <p class="eyebrow">PUBLIC EDITION • GLOBAL LEARNING • CAMPUS VOICES</p>
-      <h1>Ideas, partnerships<br><span>and opportunities.</span></h1>
-      <p class="intro-copy">A public window into the work and possibilities shaping the IILM community. Read every story freely; sign in only when you want to take part.</p>
+      <h1>Ideas, partnerships<br><span>and possibilities.</span></h1>
+      <p class="intro-copy">A public window into the work shaping the IILM community. Browse the latest partnerships, programmes and campus updates — no account needed.</p>
     </section>
 
     <section class="lead-story" id="leadStory">
-      <div class="story-placeholder"><span>THE LATEST FROM IILM</span><strong>Loading today’s front page…</strong></div>
+      <div class="story-placeholder"><span>THE LATEST FROM IILM</span><strong>Loading today's front page...</strong></div>
     </section>
 
     <div class="paper-rule"><span>THE DAILY BRIEF</span></div>
@@ -45,24 +58,71 @@
     <section class="story-grid" id="opportunityGrid"></section>
 
     <section class="public-cta" id="about">
-      <div><p class="eyebrow">WANT TO TAKE PART?</p><h2>Read publicly.<br>Participate personally.</h2></div>
-      <p>Anyone can follow IILM’s news. To express interest in an opportunity, respond to an MOU, or track your activity, create an account with your <strong>@iilm.edu</strong> email address.</p>
-      <div class="hero-buttons"><a href="register.html" class="btn btn-primary">Create an account</a><a href="login.html" class="btn btn-light">Sign in</a></div>
+      <div><p class="eyebrow">THE PUBLIC EDITION</p><h2>Read widely.<br>Stay curious.</h2></div>
+      <p>This edition is open to everyone. It is designed to make IILM's collaborations and opportunities easy to discover, share and return to.</p>
+      <a href="#front-page" class="btn btn-light">Back to the front page</a>
     </section>
   </main>
 
-  <footer class="news-footer"><div class="container"><strong>IILM UNIVERSITY CHRONICLE</strong><span>Official public newspaper • For the IILM community and the world</span><a href="register.html">Become part of the story →</a></div></footer>
+  <footer class="news-footer">
+    <div class="container">
+      <strong>IILM UNIVERSITY CHRONICLE</strong>
+      <span>Official public edition • For the IILM community and the world</span>
+      <a href="#front-page">Read from the beginning ↑</a>
+    </div>
+  </footer>
 
   <script src="js/common.js"></script>
   <script>
-    const typeLabel = { MOU: 'MOU', Opportunity: 'Opportunity', Internship: 'Internship', 'Exchange Program': 'Exchange', Conference: 'Conference', Workshop: 'Workshop', Research: 'Research', Event: 'Upcoming Event', Volunteer: 'Volunteer Call', Announcement: 'Announcement', Achievement: 'Achievement' };
+    const typeLabel = {
+      MOU: 'MOU', Opportunity: 'Opportunity', Internship: 'Internship',
+      'Exchange Program': 'Exchange', Conference: 'Conference', Workshop: 'Workshop',
+      Research: 'Research', Event: 'Upcoming Event', Volunteer: 'Volunteer Call',
+      Announcement: 'Announcement', Achievement: 'Achievement'
+    };
     const partnershipTypes = ['MOU', 'Research', 'Exchange Program', 'Internship', 'Conference', 'Workshop'];
+    const demoStories = [
+      {
+        _id: 'demo-1', title: 'IILM and the University of Cambridge open a new student pathway',
+        description: 'A new collaboration connects IILM learners with applied projects, visiting faculty and a wider conversation on the future of work.',
+        type: 'MOU', country: 'United Kingdom', university: 'University of Cambridge',
+        deadline: '2026-12-15T00:00:00.000Z', eligibility: 'IILM students with a strong academic record',
+        duration: 'One semester', funding: 'Details announced by the programme office', postedByName: 'IILM Global Partnerships',
+        responseCount: 0, createdAt: '2026-09-20T00:00:00.000Z'
+      },
+      {
+        _id: 'demo-2', title: 'Research internship: cities, climate and responsible growth',
+        description: 'Students can explore a short research placement focused on how cities can grow while keeping people and the planet in view.',
+        type: 'Research', country: 'India', university: 'IILM Centre for Future Studies',
+        deadline: '2026-11-28T00:00:00.000Z', eligibility: 'Open to final-year students and recent graduates',
+        duration: 'Three months', funding: 'Stipend available', postedByName: 'Centre for Future Studies',
+        responseCount: 0, createdAt: '2026-09-17T00:00:00.000Z'
+      },
+      {
+        _id: 'demo-3', title: 'Global classroom series returns this autumn',
+        description: 'Faculty and visiting practitioners will meet each month to discuss ideas that cross disciplines, borders and the usual classroom routine.',
+        type: 'Announcement', country: 'India', university: 'IILM University',
+        deadline: '2026-10-30T00:00:00.000Z', eligibility: 'Open to the IILM community',
+        duration: 'Monthly series', funding: '', postedByName: 'Office of Academic Affairs',
+        responseCount: 0, createdAt: '2026-09-12T00:00:00.000Z'
+      },
+      {
+        _id: 'demo-4', title: 'Designing better public services with local communities',
+        description: 'A hands-on workshop brings students together with community partners to turn observation into practical, thoughtful design.',
+        type: 'Workshop', country: 'India', university: 'IILM School of Design',
+        deadline: '2026-10-18T00:00:00.000Z', eligibility: 'Students from any discipline',
+        duration: 'Two days', funding: 'No fee', postedByName: 'School of Design',
+        responseCount: 0, createdAt: '2026-09-09T00:00:00.000Z'
+      }
+    ];
+
     const esc = value => escapeHtml(value || '');
     const date = value => new Date(value).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
     const author = post => {
       const person = post.postedBy || {};
       return `${person.prefix ? person.prefix + ' ' : ''}${person.name || post.postedByName || 'IILM University'}`;
     };
+
     function storyCard(post, featured = false) {
       const badge = typeLabel[post.type] || post.type;
       const facts = [
@@ -78,50 +138,53 @@
         <h2>${esc(post.title)}</h2>
         <p class="story-deck">${esc(post.description)}</p>
         <div class="story-facts">${facts}</div>
-        <div class="story-byline">By ${esc(author(post))} ${post.university ? `• ${esc(post.university)}` : ''}</div>
-        <div class="story-footer"><span>${post.responseCount || 0} student responses</span><a class="story-action" href="register.html">Register or sign in to take action <span>→</span></a></div>
+        <div class="story-byline">By ${esc(author(post))}${post.university ? ` • ${esc(post.university)}` : ''}</div>
+        <div class="story-footer"><span>${post.responseCount || 0} student responses</span><span class="story-action">Read in the public edition <span>→</span></span></div>
       </article>`;
     }
-    function postSummary(text) { return String(text || '').replace(/\s+/g, ' ').slice(0, 145) + (String(text || '').length > 145 ? '…' : ''); }
-    function empty(section, message) { document.getElementById(section).innerHTML = `<div class="news-empty"><strong>${message}</strong><span>New stories will appear here as IILM faculty publish them.</span></div>`; }
+
+    function postSummary(text) {
+      const cleanText = String(text || '').replace(/\s+/g, ' ');
+      return cleanText.slice(0, 145) + (cleanText.length > 145 ? '...' : '');
+    }
+
     async function loadNewspaper() {
       document.getElementById('editionDate').textContent = new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      let posts = [];
       try {
-        const response = await fetch('/api/posts/public?limit=60');
+        const response = await fetch(`${window.MOU_API_BASE || '/api'}/posts/public?limit=60`);
         const data = await response.json();
-        if (!response.ok) throw new Error(data.message || 'Unable to load stories');
-        const posts = data.posts || [];
-        if (!posts.length) {
-          document.getElementById('leadStory').innerHTML = '<div class="news-empty lead-empty"><strong>The next IILM story is being written.</strong><span>Check back soon for new MOUs, opportunities and campus news.</span></div>';
-          ['briefGrid', 'mouGrid', 'opportunityGrid'].forEach(id => empty(id, 'No stories in this section yet.'));
-          document.getElementById('tickerText').textContent = 'The IILM University Chronicle is ready for its next edition.';
-          return;
-        }
-        const lead = posts[0];
-        document.getElementById('leadStory').innerHTML = storyCard(lead, true);
-        document.getElementById('tickerText').textContent = `${lead.title} • ${typeLabel[lead.type] || lead.type} • Read the full story below`;
-        const briefs = posts.slice(1, 4);
-        const counts = [
-          ['Total stories', posts.length],
-          ['Global partnerships', posts.filter(p => partnershipTypes.includes(p.type)).length],
-          ['Events & volunteering', posts.filter(p => ['Event', 'Volunteer'].includes(p.type)).length],
-          ['News & achievements', posts.filter(p => ['Announcement', 'Achievement'].includes(p.type)).length]
-        ];
-        const countMarkup = `<div class="brief-counts">${counts.map(([label, count]) => `<div><strong>${count}</strong><span>${label}</span></div>`).join('')}</div>`;
-        const headlineMarkup = briefs.length ? `<div class="brief-headlines">${briefs.map(p => `<article class="brief-headline"><span>${esc(typeLabel[p.type] || p.type)}</span><h3>${esc(p.title)}</h3><p>${esc(postSummary(p.description))}</p><time>${date(p.createdAt)}</time></article>`).join('')}</div>` : '<div class="news-empty"><strong>More stories coming soon.</strong></div>';
-        document.getElementById('briefGrid').innerHTML = countMarkup + headlineMarkup;
-        const used = new Set([String(lead._id)]);
-        const mous = posts.filter(p => partnershipTypes.includes(p.type) && !used.has(String(p._id)));
-        mous.forEach(p => used.add(String(p._id)));
-        const opportunities = posts.filter(p => !used.has(String(p._id)));
-        opportunities.forEach(p => used.add(String(p._id)));
-        document.getElementById('mouGrid').innerHTML = mous.length ? mous.map(p => storyCard(p)).join('') : '<div class="news-empty"><strong>No partnership stories yet.</strong><span>Check back for the next MOU announcement.</span></div>';
-        document.getElementById('opportunityGrid').innerHTML = opportunities.length ? opportunities.map(p => storyCard(p)).join('') : '<div class="news-empty"><strong>No opportunity stories yet.</strong><span>New calls and programs will appear here.</span></div>';
+        if (response.ok && Array.isArray(data.posts)) posts = data.posts;
       } catch (error) {
-        document.getElementById('leadStory').innerHTML = '<div class="news-empty lead-empty"><strong>The newspaper is temporarily unavailable.</strong><span>Please refresh in a moment.</span></div>';
-        document.getElementById('tickerText').textContent = 'Please refresh to load the latest IILM stories.';
+        // The static GitHub Pages edition intentionally falls back to its editorial sample.
       }
+      if (!posts.length) posts = demoStories;
+
+      const lead = posts[0];
+      document.getElementById('leadStory').innerHTML = storyCard(lead, true);
+      document.getElementById('tickerText').textContent = `${lead.title} • ${typeLabel[lead.type] || lead.type} • Read the full story below`;
+
+      const briefs = posts.slice(1, 4);
+      const counts = [
+        ['Total stories', posts.length],
+        ['Global partnerships', posts.filter(p => partnershipTypes.includes(p.type)).length],
+        ['Events & volunteering', posts.filter(p => ['Event', 'Volunteer'].includes(p.type)).length],
+        ['News & achievements', posts.filter(p => ['Announcement', 'Achievement'].includes(p.type)).length]
+      ];
+      const countMarkup = `<div class="brief-counts">${counts.map(([label, count]) => `<div><strong>${count}</strong><span>${label}</span></div>`).join('')}</div>`;
+      const headlineMarkup = briefs.length
+        ? `<div class="brief-headlines">${briefs.map(p => `<article class="brief-headline"><span>${esc(typeLabel[p.type] || p.type)}</span><h3>${esc(p.title)}</h3><p>${esc(postSummary(p.description))}</p><time>${date(p.createdAt)}</time></article>`).join('')}</div>`
+        : '<div class="news-empty"><strong>More stories coming soon.</strong></div>';
+      document.getElementById('briefGrid').innerHTML = countMarkup + headlineMarkup;
+
+      const used = new Set([String(lead._id)]);
+      const mous = posts.filter(p => partnershipTypes.includes(p.type) && !used.has(String(p._id)));
+      mous.forEach(p => used.add(String(p._id)));
+      const opportunities = posts.filter(p => !used.has(String(p._id)));
+      document.getElementById('mouGrid').innerHTML = mous.length ? mous.map(p => storyCard(p)).join('') : '<div class="news-empty"><strong>No partnership stories yet.</strong><span>Check back for the next MOU announcement.</span></div>';
+      document.getElementById('opportunityGrid').innerHTML = opportunities.length ? opportunities.map(p => storyCard(p)).join('') : '<div class="news-empty"><strong>No opportunity stories yet.</strong><span>New calls and programmes will appear here.</span></div>';
     }
+
     loadNewspaper();
   </script>
 </body>
