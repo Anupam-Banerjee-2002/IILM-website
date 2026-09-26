@@ -5,6 +5,8 @@ The public-facing edition of the IILM MOU and opportunities portal. It presents 
 ## Open the site
 
 - [Public edition on GitHub Pages](https://anupam-banerjee-2002.github.io/IILM-website/)
+- [Full-stack app on Render](https://iilm-website-iqzm.onrender.com)
+- [Backend health check](https://iilm-website-iqzm.onrender.com/api/health)
 - [Repository](https://github.com/Anupam-Banerjee-2002/IILM-website)
 - [Pages deployment status](https://github.com/Anupam-Banerjee-2002/IILM-website/actions/workflows/deploy-pages.yml)
 
